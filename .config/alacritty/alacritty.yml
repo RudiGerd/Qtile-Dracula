@@ -1,0 +1,26 @@
+import:
+  - /home/hackme/.config/alacritty/dracula.yml
+env:
+  TERM: alacritty
+padding:
+  x: 6
+  y: 6
+tabspaces: 8
+font:
+  normal:
+    family: MesloLGS Nerd Font
+    style: Regular
+
+  bold:
+    family: MesloLGS Nerd Font
+    style: Bold
+
+  italic:
+    family: MesloLGSDZ Nerd Font Mono
+    style: Italic
+
+  size: 10.0
+draw_bold_text_with_bright_colors: true
+mouse:
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }

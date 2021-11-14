@@ -1,0 +1,17 @@
+[Default Applications]
+text/html=brave-browser.desktop
+x-scheme-handler/http=brave-browser.desktop
+x-scheme-handler/https=brave-browser.desktop
+x-scheme-handler/about=brave-browser.desktop
+x-scheme-handler/unknown=brave-browser.desktop
+x-scheme-handler/mailto=brave-browser.desktop
+inode/directory=pcmanfm.desktop
+image/png=sxiv.desktop
+application/x-executable=userapp-vim-BYLBC1.desktop
+image/jpg=sxiv.desktop
+image/jpeg=sxiv.desktop
+
+[Added Associations]
+application/x-executable=userapp-vim-BYLBC1.desktop;
+application/x-virtualbox-vbox=vim.desktop;
+image/jpeg=sxiv.desktop;
