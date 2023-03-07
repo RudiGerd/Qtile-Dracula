@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sddm &
+lxsession &
 xset r rate 300 50 &
 volumeicon &
 nm-applet &
