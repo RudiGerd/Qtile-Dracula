@@ -1,8 +1,8 @@
 #!/bin/sh
 ### OPTIONS AND VARIABLES ###
 
-dotfilesrepo="https://github.com/QWinOS/Qtile-Dracula.git"
-progsfile="https://raw.githubusercontent.com/QWinOS/Qtile-Dracula/main/packages.csv"
+dotfilesrepo="https://github.com/RudiGerd/Qtile-Dracula.git"
+progsfile="https://raw.githubusercontent.com/RudiGerd/Qtile-Dracula/main/packages.csv"
 aurhelper="paru"
 repobranch="main"
 
@@ -79,8 +79,8 @@ Include = /etc/pacman.d/mirrorlist-arch" >>/etc/pacman.conf
 }
 
 newperms() { # Set special sudoers settings for install (or after).
-	sed -i "/#QWinOS/d" /etc/sudoers
-	echo "$* #QWinOS" >>/etc/sudoers
+	sed -i "/#RudiGerd/d" /etc/sudoers
+	echo "$* #RudiGerd" >>/etc/sudoers
 }
 
 manualinstall() { # Installs $1 manually. Used only for AUR helper here.
@@ -281,7 +281,7 @@ sudo -u "$name" pulseaudio --start
 
 # This line, overwriting the `newperms` command above will allow the user to run
 # serveral important commands, `shutdown`, `reboot`, updating, etc. without a password.
-newperms "%wheel ALL=(ALL) ALL #QWinOS
+newperms "%wheel ALL=(ALL) ALL #RudiGerd
 %wheel ALL=(ALL) NOPASSWD: /usr/bin/shutdown,/usr/bin/reboot,/usr/bin/systemctl suspend,/usr/bin/wifi-menu,/usr/bin/mount,/usr/bin/umount,/usr/bin/pacman -Syu,/usr/bin/pacman -Syyu,/usr/bin/packer -Syu,/usr/bin/packer -Syyu,/usr/bin/systemctl restart NetworkManager,/usr/bin/rc-service NetworkManager restart,/usr/bin/pacman -Syyu --noconfirm,/usr/bin/loadkeys,/usr/bin/paru,/usr/bin/pacman -Syyuw --noconfirm"
 failinstallationloop
 # Last message! Install complete!
